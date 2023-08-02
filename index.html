@@ -3,31 +3,35 @@
     <head>
         <title>Weather Dashboard</title>
         <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
 <body>
     <header class="header">
-        <h1 class="title">Weather Dashboard</h1>
+        <h1 class="font-bold text-white text-xl bg-blue-900 p-3">Weather Dashboard</h1>
     </header>
 
     <main>
         <section>
             <!-- Search for a City -->
-            <h2>Search for a City</h2>
-            <input type="text" placeholder="San Diego">
+            <h2 class="font-bold text-lg">Search for a City:</h2>
+            <!-- <input type="text" placeholder="San Diego"> -->
+            <input type="text" class="border-2 border-gray-500 rounded-md p-1" id="city-search" placeholder="San Diego">
             <!-- make button type submit? -->
             <!-- button value? -->  
-            <button type="button">Search</button>
+            <button type="button" class="px-20 py-1 text-white bg-blue-500 rounded shadow-sm hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300" id="search-btn">
+                Search
+            </button>
             <div class="city">
-                <ul>
-                    <li>Atlanta</li>
-                    <li>Denver</li>
-                    <li>Seattle</li>
-                    <li>San Francisco</li>
-                    <li>Orlando</li>
-                    <li>New York</li>
-                    <li>Chicago</li>
-                    <li>Austin</li>
+                <ul class="list-none">
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Atlanta</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Denver</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Seattle</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">San Francisco</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Orlando</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">New York</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Chicago</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Austin</li>
                 </ul>
             </div>
         </section>
