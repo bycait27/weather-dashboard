@@ -7,37 +7,42 @@
     </head>
 
 <body>
-    <header class="header">
-        <h1 class="font-bold text-white text-xl bg-blue-900 p-3">Weather Dashboard</h1>
+    <header id="header">
+        <h1 class="font-bold text-white text-2xl bg-blue-900 p-3">Weather Dashboard</h1>
     </header>
 
     <main>
-        <section>
+        <section class="float-left">
             <!-- Search for a City -->
-            <h2 class="font-bold text-lg">Search for a City:</h2>
+            <h2 class="order-1 font-bold text-xl m-1">Search for a City:</h2>
             <!-- <input type="text" placeholder="San Diego"> -->
-            <input type="text" class="border-2 border-gray-500 rounded-md p-1" id="city-search" placeholder="San Diego">
+            <div class="flex flex-col">
+                <input type="text" class="order-2 border-2 border-gray-500 rounded-md p-1" id="city-search" placeholder="San Diego">
             <!-- make button type submit? -->
             <!-- button value? -->  
-            <button type="button" class="px-20 py-1 text-white bg-blue-500 rounded shadow-sm hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300" id="search-btn">
+            <button type="button" class="order-3 px-20 py-1 text-white bg-blue-500 rounded shadow-sm hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 m-2" id="search-btn">
                 Search
             </button>
-            <div class="city">
-                <ul class="list-none">
-                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Atlanta</li>
-                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Denver</li>
-                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Seattle</li>
-                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">San Francisco</li>
-                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Orlando</li>
-                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">New York</li>
-                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Chicago</li>
-                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-5 text-center">Austin</li>
+            </div>
+            <div id="city">
+                <ul class="flex flex-col">
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-2 text-center">Atlanta</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-2 text-center">Denver</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-2 text-center">Seattle</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-2 text-center">San Francisco</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-2 text-center">Orlando</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-2 text-center">New York</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-2 text-center">Chicago</li>
+                    <li class="px-20 py-1 bg-zinc-400 rounded shadow-sm m-2 text-center">Austin</li>
                 </ul>
             </div>
         </section>
 
         <section>
             <!-- Forecast -->
+            <div>
+
+            </div>
         </section>
     </main>
 </body>
