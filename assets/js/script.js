@@ -16,24 +16,9 @@ function getForecast(city) {
     response.json();
 }
 
+// event listener to fetch forecast when user presses search --- not working
 searchBtn.addEventListener("click", function(event) {
     getForecast(userInput.value);
     let forecastElement = document.getElementById("forecast");
     forecastElement.innerHTML = getForecast(userInput.value)
 });
-
-// function fetchData() {
-//     fetch(`api.openweathermap.org/data/2.5/weather?q=${city}&appid=apiKey`)
-//     .then(function(response) {
-//         return response.json();
-//     })
-
-
-// .then(function(data) {
-//     console.log(data);
-//     let forecastElement = document.getElementById("forecast");
-//     forecastElement.innerHTML = "";
-// });
-// };
-
-// searchBtn.addEventListener("click", fetch(queryUrl));
