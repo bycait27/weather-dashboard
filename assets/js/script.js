@@ -13,7 +13,7 @@ console.log(weather.Atlanta.lat);
 
 
 function fetchData() {
-    fetch(`api.openweathermap.org/data/2.5/forecast?lat=${weather.Atlanta.lat}&lon=${weather.Atlanta.lon}&appid=5dec7b6debd352b0f0b1900bde30e10b`)
+    fetch(`api.openweathermap.org/data/2.5/forecast?lat=${weather.Atlanta.lat}&lon=${weather.Atlanta.lon}&appid={API KEY}`)
     .then(function(response) {
         return response.json();
     })
