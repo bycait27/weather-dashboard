@@ -7,7 +7,8 @@ body {
 }
 
 .header h1 {
-    background-color: #1e3a8a;
+    background: rgb(37,99,235);
+    background: linear-gradient(90deg, rgba(37,99,235,1) 7%, rgba(30,58,138,1) 64%);
     font-weight: bolder;
     color: white;
     text-align: center;
@@ -16,6 +17,11 @@ body {
 
 .left-side {
     float: left;
+    width: 30%
+}
+
+.left-side h2 {
+    font-size: x-large;
 }
 
 h2 {
@@ -80,11 +86,16 @@ li {
     padding-bottom: 0.25rem;
 } 
 
-/* .right-side-top, .right-side-bottom {
+.right-side-top, .right-side-bottom {
     float: right;
+    width: 70%;
 } 
 
-.right-side-bottom {
+.left-side, .right-side-top, .right-side-bottom {
+    display: block;
+}
+
+/* .right-side-bottom {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -129,12 +140,35 @@ p .copyright {
     font-weight: 700;
 }
 
+.right-side-bottom h2 {
+    margin-left: 1rem;
+}
+
 .forecast {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-left: 0.5rem;
+}
+
+.forecast .card {
+    height: 11rem;
+    padding-right: 1.5rem;
+    margin: 1rem;
 }
 
 .today-forecast {
     border: 1px solid black;
+    padding: 0.5rem;
+    margin: 1rem
+}
+
+.today-forecast h3 {
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.today-forecast p {
+    font-size: small;
+    padding-top: 10px;
 }
