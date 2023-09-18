@@ -7,27 +7,29 @@
     </head>
 
 <body>
+    <!-- header section -->
     <header class="header" id="header">
+        <!-- title -->
         <h1 class="indent-96 text-2xl">Weather Dashboard</h1>
     </header>
 
+    <!-- main section -->
     <main>
-        <section class="left-side">
+        <section id="search-section" class="left-side">
             <!-- Search for a City -->
             <h2 class="text-xl m-1 indent-2">Search for a City:</h2>
-            <!-- <input type="text" placeholder="San Diego"> -->
+            <!-- input box for search -->
             <div class="search-city">
-                <input type="text" id="city-search" placeholder="San Diego">
-            <!-- make button type submit? -->
-            <!-- button value? -->  
-            <button type="button" class="focus:ring m-2" id="search-btn">
+                <input type="text" id="city-search" placeholder="Enter a city"> 
+            <!-- search button (fetches api) -->
+            <button type="submit" class="focus:ring m-2" id="search-btn">
                 Search
             </button>
             </div>
             <div class="border-y-2 city-list"></div>
-            <div id="city">
+            <!-- <div id="city"> -->
                 <!-- list of suggested cities to search -->
-                <ul>
+                <!-- <ul>
                     <li>Atlanta</li>
                     <li>Denver</li>
                     <li>Seattle</li>
@@ -37,16 +39,30 @@
                     <li>Chicago</li>
                     <li>Austin</li>
                 </ul>
-            </div>
+            </div> -->
         </section>
 
-        <section>
-            <!-- Forecast -->
-            <div id="forecast">
+        <section id="current-weather-section" class="right-side-top">
+            <!-- title -->
+            <h2>Today's Weather:</h2>
+            <!-- today's weather card container  -->
+            <div id="today-forecast"></div>
+        </section>
 
-            </div>
+        <section id="forecast-section" class="right-side-bottom">
+            <!-- title -->
+            <h2>5-Day Forecast:</h2>
+            <!-- 5-day forecast card container -->
+            <div id="forecast"></div>
         </section>
     </main>
+
+    <!-- footer section -->
+    <footer class="footer">
+        <!-- add copyright here -->
+        <p class="copyright">&copy; 2023 Weather Dashboard. All rights reserved.</p>
+    </footer>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
