@@ -17,7 +17,7 @@
     <main>
         <section id="search-section" class="left-side">
             <!-- Search for a City -->
-            <h2 class="text-xl m-1 indent-2">Search for a City:</h2>
+            <h2 class="m-1 indent-2 font-bold">Search for a City:</h2>
             <!-- input box for search -->
             <div class="search-city">
                 <input type="text" id="city-search" placeholder="Enter a city"> 
@@ -27,9 +27,9 @@
             </button>
             </div>
             <div class="border-y-2 city-list"></div>
-            <!-- <div id="city"> -->
+             <div id="city">
                 <!-- list of suggested cities to search -->
-                <!-- <ul>
+                 <ul>
                     <li>Atlanta</li>
                     <li>Denver</li>
                     <li>Seattle</li>
@@ -39,65 +39,65 @@
                     <li>Chicago</li>
                     <li>Austin</li>
                 </ul>
-            </div> -->
+            </div> 
         </section>
 
         <section id="current-weather-section" class="right-side-top">
             <!-- title -->
-            <h2>Today's Weather:</h2>
+            <!-- <h2 class="font-bold">Today's Weather:</h2> -->
             <!-- today's weather card container  -->
             <div id="today-forecast" class="today-forecast">
-                <h3 id="city-name" class="city-name"></h3>
-                <p id="today-temp">Temp:</p>
-                <p id="today-wind">Wind:</p>
-                <p id="today-humidity">Humidity:</p>
+                <h3 id="city-name" class="city-name">Atlanta (9/13/2023) ☀️</h3>
+                <p id="today-temp">Temp: 76.62 °F</p>
+                <p id="today-wind">Wind: 8.43 MPH</p>
+                <p id="today-humidity">Humidity: 44 %</p>
             </div>
         </section>
 
         <section id="forecast-section" class="right-side-bottom">
             <!-- title -->
-            <h2>5-Day Forecast:</h2>
+            <h2 class="font-bold">5-Day Forecast:</h2>
             <!-- 5-day forecast card container -->
             <div id="forecast" class="forecast">
                 <!-- cards for 5-day forecast -->
-                <div id="card-one" class="card-one">
-                    <h3 id="date-one" class="date-one"></h3>
-                    <p id="emoji-one"></p>
-                    <p id="temp-one">Temp:</p>
-                    <p id="wind-one">Wind:</p>
-                    <p id="humidity-one">Humidity:</p>
+                <div id="card" class="card">
+                    <h3 id="date-one" class="date-one">9/14/2023</h3>
+                    <p id="emoji-one">☀️</p>
+                    <p id="temp-one">Temp: 63.55 °F</p>
+                    <p id="wind-one">Wind: 3.94 MPH</p>
+                    <p id="humidity-one">Humidity: 63 %</p>
                 </div>
 
-                <div id="card-two" class="card-two">
-                    <h3 id="date-two" class="date-two"></h3>
-                    <p id="emoji-two"></p>
-                    <p id="temp-two">Temp:</p>
-                    <p id="wind-two">Wind:</p>
-                    <p id="humidity-two">Humidity:</p>
+                <div id="card" class="card">
+                    <h3 id="date-two" class="date-two">9/15/2023</h3>
+                    <p id="emoji-two">☀️</p>
+                    <p id="temp-two">Temp: 66.52 °F</p>
+                    <p id="wind-two">Wind: 3.91 MPH</p>
+                    <p id="humidity-two">Humidity: 64 %</p>
                 </div>
                 
-                <div id="card-three" class="card-three">
-                    <h3 id="date-three" class="date-three"></h3>
-                    <p id="emoji-three"></p>
-                    <p id="temp-three">Temp:</p>
-                    <p id="wind-three">Wind:</p>
-                    <p id="humidity-three">Humidity:</p>
+                <div id="card" class="card">
+                    <h3 id="date-three" class="date-three">9/16/2023</h3>
+                    <p id="emoji-three">☀️</p>
+                    <p id="temp-three">Temp: 67.71 °F</p>
+                    <p id="wind-three">Wind: 3.27 MPH</p>
+                    <p id="humidity-three">Humidity: 64 %</p>
                 </div>
 
-                <div id="card-four" class="card-four">
-                    <h3 id="date-four" class="date-four"></h3>
-                    <p id="emoji-four"></p>
-                    <p id="temp-four">Temp:</p>
-                    <p id="wind-four">Wind:</p>
-                    <p id="humidity-four">Humidity:</p>
+                <div id="card" class="card">
+                    <h3 id="date-four" class="date-four">9/17/2023</h3>
+                    <p id="emoji-four">☀️</p>
+                    <p id="temp-four">Temp: 67.1 °F</p>
+                    <p id="wind-four">Wind: 4.65 MPH</p>
+                    <p id="humidity-four">Humidity: 72 %</p>
                 </div>
 
-                <div id="card-five" class="card-five">
-                    <h3 id="date-five" class="date-five"></h3>
-                    <p id="emoji-five"></p>
-                    <p id="temp-five">Temp:</p>
-                    <p id="wind-five">Wind:</p>
-                    <p id="humidity-five">Humidity:</p>
+                <div id="card" class="card">
+                    <h3 id="date-five" class="date-five">9/18/2023</h3>
+                    <p id="emoji-five">☁️</p>
+                    <p id="temp-five">Temp: 70.57 °F</p>
+                    <p id="wind-five">Wind: 4.23 MPH</p>
+                    <p id="humidity-five">Humidity: 62 %</p>
                 </div>
 
             </div>
