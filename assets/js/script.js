@@ -3,10 +3,6 @@ const userInput = document.getElementById("city-search");
 // stores search button
 const searchBtn = document.getElementById("search-btn");
 
-// store latitude 
-// const lat = '';
-// store longitude
-// const lon = '';
 
 // stores api key for weather api
 const apiKey = "5dec7b6debd352b0f0b1900bde30e10b";
