@@ -68,7 +68,7 @@ async function getCoordinates(cityName) {
     }
 };
 
-// function to fetchh and display current weather information
+// function to fetch and display current weather information
 function displayCurrentWeather(cityName, currentData) {
     let currentDate = new Date(currentData.dt * 1000).toLocaleDateString('en-US');
     let iconUrl = `https://openweathermap.org/img/wn/${currentData.weather[0].icon}.png`;

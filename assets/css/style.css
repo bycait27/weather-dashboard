@@ -101,7 +101,7 @@ li {
     flex-direction: row;
 }  */
 
-div .card {
+div .forecast-card {
     background-color: #334155;
     display: flex;
     flex-direction: column;
@@ -130,7 +130,7 @@ p .copyright {
     margin: 10px;
 }
 
-.card {
+.forecast-card {
     padding: 1rem;
     font-size: smaller;
     margin-top: 0.5rem;
@@ -151,7 +151,7 @@ p .copyright {
     margin-left: 0.5rem;
 }
 
-.forecast .card {
+.forecast .forecast-card {
     height: 11rem;
     padding-right: 1.5rem;
     margin: 1rem;
