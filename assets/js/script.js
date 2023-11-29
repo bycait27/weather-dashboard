@@ -122,6 +122,9 @@ async function getWeatherData(cityName) {
         const response = await fetch(apiUrl);
         const data = await response.json();
 
+        // clear existing weather information 
+        document.getElementById('forecast').innerHTML = '';
+
         displayCurrentWeather(cityName, data.daily[0]);
         displayWeatherForecast(data.daily.slice(1, 6));
 
