@@ -14,7 +14,7 @@ To use this website, the user simply searches for a city of their choice and pre
 
 ![screenshot](./assets/images/Screenshot%202023-11-29%20at%202.55.51%20PM.png)
 
-[Weather Dashboard](https://bycait27.github.io/weather-dashboard/)
+[Weather Dashboard](https://willowy-medovik-414add.netlify.app/)
 
 ## Credits
 
