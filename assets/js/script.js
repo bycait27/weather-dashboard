@@ -36,22 +36,22 @@ async function getWeatherData(cityName) {
         // retrieve coordinates from getCoordinates function
         const { lat, lon } = await getCoordinates(cityName);
          // stores url for weather api
-        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+        const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,alerts&appid=${apiKey}&units=imperial`;
 
         // make request to weather api endpoint using fetch
         const response = await fetch(apiUrl);
         const data = await response.json();
 
         // get the current date
-        const currentDate = new Date();
+        // const currentDate = new Date();
 
-        // extract the day, month, and year
-        const day = currentDate.getDate();
-        const month = currentDate.getMonth() + 1;
-        const year = currentDate.getFullYear();
+        // // extract the day, month, and year
+        // const day = currentDate.getDate();
+        // const month = currentDate.getMonth() + 1;
+        // const year = currentDate.getFullYear();
     
-        // format date to MM/DD/YYYY 
-        const formattedDate = `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year}`;
+        // // format date to MM/DD/YYYY 
+        // const formattedDate = `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year}`;
 
         // document.getElementById('city-name').textContent = `${data.city.name} ${formattedDate}`;
         // document.getElementById('today-temp').textContent = `Temp: ${data.list[0].main.temp} °F`;
@@ -81,18 +81,14 @@ async function getWeatherData(cityName) {
         //     }
 
         //     console.log('*********** Group Separator ***********');
-            // const forecast = forecastArray[i];
-            // const main = forecast.main;
+        //     const forecast = forecastArray[i];
+        //     const main = forecast.main;
 
-            // const temp = main.temp;
-
-            // console.log(data.list);
-
-            // console.log(temp);
+        //     const temp = main.temp;
         // }
 
         // test api
-        // console.log(data.list[0].main.temp);
+        console.log(data.current.temp);
 
     } catch (error) {
         console.log('Error in fetching weather data:', error);
@@ -100,7 +96,7 @@ async function getWeatherData(cityName) {
 };
 
 // test api
-// getWeatherData('Chicago')
+getWeatherData('Chicago')
 
 // function to handle city submission
 const handleBtn = (event) => {
