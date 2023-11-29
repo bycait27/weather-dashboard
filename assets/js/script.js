@@ -39,6 +39,7 @@ function displayCurrentWeather(cityName, currentData) {
     let humidity = currentData.humidity;
 
     document.getElementById('city-name').textContent = `${cityName} ${currentDate}`;
+    document.getElementById('icon').setAttribute('src', `${iconUrl}`);
     document.getElementById('today-temp').textContent = `Temp: ${temp} °F`;
     document.getElementById('today-wind').textContent = `Wind: ${wind} MPH`;
     document.getElementById('today-humidity').textContent = `Humidity: ${humidity} %`;
