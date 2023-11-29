@@ -42,9 +42,6 @@ function displayCurrentWeather(cityName, currentData) {
     document.getElementById('today-temp').textContent = `Temp: ${temp} °F`;
     document.getElementById('today-wind').textContent = `Wind: ${wind} MPH`;
     document.getElementById('today-humidity').textContent = `Humidity: ${humidity} %`;
-
-
-
 };
 
 // function to fetch and display 5-day weather forecast
@@ -56,6 +53,20 @@ function displayWeatherForecast(forecastData) {
         let temp = forecastData[i].temp.day;
         let wind = forecastData[i].wind_speed;
         let humidity = forecastData[i].humidity;
+
+        let fiveForecast = document.createElement('div');
+        fiveForecast.setAttribute('class', 'forecast-card');
+    
+        let fiveForecastEl = `
+        <h3 id="date" class="date">${date}</h3>
+        <img src="${iconUrl}"/>
+        <p id="temp">Temp: ${temp} °F</p>
+        <p id="wind">Wind: ${wind} MPH</p>
+        <p id="humidity">Humidity: ${humidity} %</p>
+        `;
+
+        fiveForecast.innerHTML = fiveForecastEl;
+        document.getElementById('forecast').append(fiveForecast);
     }
 };
 
@@ -73,7 +84,7 @@ async function getWeatherData(cityName) {
 
         displayCurrentWeather(cityName, data.daily[0]);
         displayWeatherForecast(data.daily.slice(1, 6));
-        
+
     } catch (error) {
         console.log('Error in fetching weather data:', error);
     }
