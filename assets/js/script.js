@@ -59,22 +59,14 @@ async function getWeatherData(cityName) {
         // retrieve coordinates from getCoordinates function
         const { lat, lon } = await getCoordinates(cityName);
          // stores url for weather api
-        const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,alerts&appid=${apiKey}&units=imperial`;
+        const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,hourly,minutely,alerts&appid=${apiKey}&units=imperial`;
 
         // make request to weather api endpoint using fetch
         const response = await fetch(apiUrl);
         const data = await response.json();
 
-        // get the current date
-        // const currentDate = new Date();
-
-        // // extract the day, month, and year
-        // const day = currentDate.getDate();
-        // const month = currentDate.getMonth() + 1;
-        // const year = currentDate.getFullYear();
-    
-        // // format date to MM/DD/YYYY 
-        // const formattedDate = `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year}`;
+        displayCurrentWeather(cityName, data.daily[0]);
+        displayWeatherForecast(data.daily.slice(1, 6));
 
         // document.getElementById('city-name').textContent = `${data.city.name} ${formattedDate}`;
         // document.getElementById('today-temp').textContent = `Temp: ${data.list[0].main.temp} °F`;
@@ -88,30 +80,6 @@ async function getWeatherData(cityName) {
 
         // update ui with weather data
         // document.getElementById('today-temp').textContent = `Temp: ${temp} °F`;
-
-
-        // const forecastArray = data.list;
-        // const forecastGroup = 8;
-
-        // for (let i = 0; i < forecastArray.length; i+= forecastGroup) {
-        //     for (let j = 0; j < forecastGroup && i + j < forecastArray.length; j++) {
-        //         const forecast = forecastArray[i + j];
-        //         const main = forecast.main;
-
-        //         const temp = main.temp;
-
-        //         console.log(temp);
-        //     }
-
-        //     console.log('*********** Group Separator ***********');
-        //     const forecast = forecastArray[i];
-        //     const main = forecast.main;
-
-        //     const temp = main.temp;
-        // }
-
-        // test api
-        console.log(data.current.temp);
 
     } catch (error) {
         console.log('Error in fetching weather data:', error);
