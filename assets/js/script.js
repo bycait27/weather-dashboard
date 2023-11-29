@@ -95,6 +95,7 @@ function displayWeatherForecast(forecastData) {
 
         let fiveForecast = document.createElement('div');
         fiveForecast.setAttribute('class', 'forecast-card');
+        fiveForecast.setAttribute('class', 'overflow-scroll');
     
         let fiveForecastEl = `
         <h3 id="date" class="date">${date}</h3>
