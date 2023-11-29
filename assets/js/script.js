@@ -38,6 +38,12 @@ function displayCurrentWeather(cityName, currentData) {
     let wind = currentData.wind_speed;
     let humidity = currentData.humidity;
 
+    document.getElementById('city-name').textContent = `${cityName} ${currentDate}`;
+    document.getElementById('today-temp').textContent = `Temp: ${temp} °F`;
+    document.getElementById('today-wind').textContent = `Wind: ${wind} MPH`;
+    document.getElementById('today-humidity').textContent = `Humidity: ${humidity} %`;
+
+
 
 };
 
@@ -67,20 +73,7 @@ async function getWeatherData(cityName) {
 
         displayCurrentWeather(cityName, data.daily[0]);
         displayWeatherForecast(data.daily.slice(1, 6));
-
-        // document.getElementById('city-name').textContent = `${data.city.name} ${formattedDate}`;
-        // document.getElementById('today-temp').textContent = `Temp: ${data.list[0].main.temp} °F`;
-        // document.getElementById('today-wind').textContent = `Wind: ${data.list[0].wind.speed} MPH`;
-        // document.getElementById('today-humidity').textContent = `Humidity: ${data.list[0].main.humidity} %`;
-
-        // process data and update the ui
-        // const temp = data.list[0].main.temp;
-        // const wind = data.wind.speed;
-        // const humidity = data.main.humidity;
-
-        // update ui with weather data
-        // document.getElementById('today-temp').textContent = `Temp: ${temp} °F`;
-
+        
     } catch (error) {
         console.log('Error in fetching weather data:', error);
     }
