@@ -30,6 +30,29 @@ async function getCoordinates(cityName) {
     }
 };
 
+// function to fetchh and display current weather information
+function displayCurrentWeather(cityName, currentData) {
+    let currentDate = new Date(currentData.dt * 1000).toLocaleDateString('en-US');
+    let iconUrl = `https://openweathermap.org/img/wn/${currentData.weather[0].icon}.png`;
+    let temp = currentData.temp.day;
+    let wind = currentData.wind_speed;
+    let humidity = currentData.humidity;
+
+
+};
+
+// function to fetch and display 5-day weather forecast
+function displayWeatherForecast(forecastData) {
+    // loop through each day of forecast
+    for (let i = 0; i < forecastData.length; i++) {
+        let date = new Date(forecastData[i].dt * 1000).toLocaleDateString('en-US');
+        let iconUrl = `https://openweathermap.org/img/wn/${forecastData[i].weather[0].icon}.png`;
+        let temp = forecastData[i].temp.day;
+        let wind = forecastData[i].wind_speed;
+        let humidity = forecastData[i].humidity;
+    }
+};
+
 // function to fetch weather data from weather api
 async function getWeatherData(cityName) {
     try {
