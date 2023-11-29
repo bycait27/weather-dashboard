@@ -12,13 +12,15 @@ N/A
 
 To use this website, the user simply searches for a city of their choice and presses on the "Search" button. Once submitted, the 5-day forecast in addition to the current day forecast should appear on the web page to the right. The user can search as many cities as they want, and their previously searched cities should appear below the search bar. For now, there is a placeholder list of cities that the user can search for. The weather API currently does not fetch properly, so this will be improved upon.
 
-![screenshot](./assets/images/Screen%20Shot%202023-08-03%20at%209.53.24%20PM.png)
+![screenshot](./assets/images/Screenshot%202023-11-29%20at%202.55.51%20PM.png)
 
-[website](https://bycait27.github.io/weather-dashboard/)
+[Weather Dashboard](https://bycait27.github.io/weather-dashboard/)
 
 ## Credits
 
 [Request-Response Documentation](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
+
+[One Call API 3.0 Documentation](https://openweathermap.org/api/one-call-3)
 
 ## License
 
